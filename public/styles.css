@@ -1,0 +1,14 @@
+/*"lato", "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif*/
+
+body {
+    /*background: red;*/
+    font-family: "lato", "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+    text-align: center;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    
+
+}

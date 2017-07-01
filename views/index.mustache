@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="images.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Homemade+Apple|Kalam|Permanent+Marker|Rock+Salt|Shadows+Into+Light|Shadows+Into+Light+Two" rel="stylesheet">
+  <title>Hangman</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class='header'>
+      <h3>Hangman Game</h3>
+      <h3>You have {{trials}} trials left</h3>
+    </div>
+    <h1 class='guess-fields'>
+      {{#hiddenWord}}
+        {{.}}
+      {{/hiddenWord}}
+    </h1>
+    <form class='form' method='post' action='/'>
+      <input type="text" id="letterInput" name="letter" autofocus="autofocus" value='' placeholder="Example: A" maxlength='1'>
+      <input type="submit" id='add' value="Make a guess">
+      {{#errors}}
+        <div class='errors'> {{msg}}</div>
+      {{/errors}}
+    </form>
+    <div class='guesses'>
+      <h3><b>Letters guessed:</b> {{attemptedLetters }} {{^attemptedLetters}} None {{/attemptedLetters}} </h3>
+      <h3><b>{{answer}}</b></h3>
+      <img src= {{imagepath}} alt="hangman pic" height="250" width="250">
+    </div>
+    <script type="text/javascript" src="images.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+</body>
+
+</html>
